@@ -25,7 +25,7 @@ deadlock:
   use: true  # deadlock detection
 
 dataset:
-  batch_size: 192  # 32 GPUs
+  batch_size: 4  # 32 GPUs
   sample_on_weight: false  # Uniform sampling all the way
   sample_on_duration: false  # Uniform sampling all the way
 
@@ -36,12 +36,12 @@ generate:
     top_p: 0.0
 
 optim:
-  epochs: 500
+  epochs: 10
   optimizer: dadam
   lr: 1
   ema:
     use: true
-    updates: 10
+    updates: 2
     device: cuda
 
 logging:
@@ -50,6 +50,6 @@ logging:
 schedule:
   lr_scheduler: cosine
   cosine:
-    warmup: 4000
+    warmup: 200
     lr_min_ratio: 0.0
     cycle_length: 1.0
