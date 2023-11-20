@@ -1,3 +1,8 @@
+# How to run
+```
+dora run solver=musicgen/musicgen_base_32khz model/lm/model_scale=small continue_from=//sig/968434f2 conditioner=text2music dset=audio/zalo23
+```
+
 # AudioCraft
 ![docs badge](https://github.com/facebookresearch/audiocraft/workflows/audiocraft_docs/badge.svg)
 ![linter badge](https://github.com/facebookresearch/audiocraft/workflows/audiocraft_linter/badge.svg)
